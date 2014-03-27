@@ -56,6 +56,15 @@ To build eyes-two, additionally run the following:
 After building, the tess-two and eyes-two projects can be imported into Eclipse using 
 File->Import->Existing Projects into Workspace.
 
+to build tess-two ubuntu 13.10
+    git clone git://github.com/rmtheis/tess-two tess
+    
+    1, import project tess-two into Eclipse using File->Import->Existing Projects.
+    2, target to android4.3, and check it from build path
+    3, change AndroidManifest.xml file. add android:targetSdkVersion="18" to <uses-sdk android:minSdkVersion="8" />, so the line would be like <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="18" />
+    3, then run under tess-two in Eclipse workspace:
+        ndk-build
+    4, run it or test it
 Maven
 =====
 
